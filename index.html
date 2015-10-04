@@ -52,7 +52,7 @@
 											</ul>
 										</div>
 										<div class="mdl-card__actions mdl-card--border">
-											<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
+											<a ng-click="readmore_click($event)" index="{{$index}}" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
 											<div class="mdl-layout-spacer"></div>
 											<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
 											<button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
@@ -65,29 +65,53 @@
 					</div>		
 				</div>				
 				
-				<!--Login to upload books - not require -->				
-				<div id="form-login-wrapper" class="form-login-wrapper skip">
-					<header>
-						<h2 id="login-message" class="skip">Login as a teacher to manage library</h2>
-					</header>
-					<form action="#" id="login-form" class="login-form mdl-shadow--2dp skip">					
-						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">					
-						  	<input class="mdl-textfield__input" type="text" id="username" />
-							<label class="mdl-textfield__label" for="username">User Name</label>					
-					  	</div>
-					  	<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">					
-						  	<input class="mdl-textfield__input" type="password" id="password" />
-							<label class="mdl-textfield__label" for="password">Password</label>					
-					  	</div>
-						<button id="button-login" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-						  Login
-						</button>
-						<button id="button-skip" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-						  Cancel
-						</button>
-					</form>
-				</div>				
-			</section>
+				<!-- edit form -->
+				<section class="book_detail_section">  
+			    <header>
+			      <div class="book_title">
+			        <h2>{{ book_detail.name }}</h2>
+			      </div>
+			    </header>
+			    <section class="book_detail">
+			      <div class="book_cover">
+			        <img ng-src="http://restful-soa.esy.es/upload/books/{{ book_detail.image }}" alt="" >
+			      </div>
+			      <div class="book_detail_content">
+			        <h4>Book Description</h4>        
+			        <p>{{ book_detail.description }}</p>
+			        <h4>Book Detail</h4>			        
+			        <table>	
+			        	<tr class="book-category" data-value="{{ book.field }}">
+			        		<td>Category: </td>
+			        		<td> {{ book_detail.field }}</td>
+			        	</tr>
+			        	<tr class="book-code">
+			        		<td>ISBN: </td>
+			        		<td>{{ book_detail.code }}</td>
+			        	</tr>
+								<tr class="book-author">
+									<td>Author: </td>
+									<td>{{ book_detail.author }}</td>
+								</tr>
+								<tr class="book-publisher">
+									<td>Publisher: </td>
+									<td>{{ book_detail.publisher }}</td>
+								</tr>
+								<tr class="book-year">
+									<td>Year: </td>
+									<td>{{ book_detail.publish_year }}</td>
+								</tr>
+								<tr class="book-pages">
+									<td>Pages: </td>
+									<td>{{ book_detail.pages }}</td>
+								</tr>
+			        </table>																							
+	          	<button ng-click="close($event)" index="{{book_detail.id}}" id="back" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+	              BACK
+	            </button>			          			          	          			         
+			      </div>
+			    </section>			    
+			  </section>
 
 			<footer>
 				<div>

@@ -97,28 +97,6 @@ h2#login-message.skip {
 	display: block;
 }
 
-.main form#upload_book {
-	position: fixed;
-	background: white;
-	bottom: -500px;
-	left: 30%;	
-	width: 500px;	
-	z-index: 99;
-	transition: bottom 1s ease;
-	-webkit-transition: bottom 1s ease;
-	-mox-transition: bottom 1s ease;
-	-o-transition: bottom 1s ease;
-}
-
-.main form#upload_book.active {	
-	bottom: 0;
-}
-
-#login-form div{
-	display: block;
-	margin: 0 auto;
-}
-
 .category ul {
 	list-style: none;
 	padding: 0;
@@ -156,4 +134,49 @@ button.add-new-book {
 
 footer {
 	text-align: center;
+}
+
+/**
+ *
+ * Book Detail Section
+ * 
+ */
+
+.book_detail_section {
+	position: fixed;
+	z-index: 9;
+	bottom: -100%;
+	left: 10px;
+	width: 100%;
+	height: 100%;
+	background: white;	
+}
+
+.book_detail_section.active {	
+	bottom: 0;
+}
+
+.book_cover {
+	display: inline-block;
+	width: 30%;
+	float: left;
+}
+
+.book_cover img {
+	max-width: 100%;
+}
+
+.book_detail_content {
+	display: inline-block;
+	width: 70%;	
+	text-align: left;
+}
+
+#update-book {
+	display: block;
+	margin: 30px auto;
+}
+
+#back {
+	float: left;
 }
