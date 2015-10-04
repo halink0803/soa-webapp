@@ -32,32 +32,3 @@ bookList.controller('bookListController', function($scope, $http) {
     						}   
 })
 
-function login() {
-
-}
-
-function loadMainContent() {
-	document.getElementById('login-form').setAttribute("class", "skip");
-	document.getElementById('login-message').setAttribute("class", "skip");
-	document.getElementById('form-login-wrapper').setAttribute("class", "skip");
-}
-
-function add_book_form() {
-	document.getElementById('upload_book').setAttribute("class", "active");
-	document.getElementById('book-upload-wrapper').setAttribute("class", "active");
-}
-
-function cancel_add_book() {
-	document.getElementById('upload_book').removeAttribute("class", "active");
-	document.getElementById('book-upload-wrapper').removeAttribute("class", "active");
-}
-
-function add_book() {
-	
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById("button-login").addEventListener("click", login);
-  document.getElementById("button-skip").addEventListener("click", loadMainContent);      
-});
-
