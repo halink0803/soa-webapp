@@ -81,27 +81,27 @@
 			        <p>{{ book_detail.description }}</p>
 			        <h4>Book Detail</h4>			        
 			        <table>	
-			        	<tr class="book-category" data-value="{{ book.field }}">
+			        	<tr data-value="{{ book.field }}">
 			        		<td>Category: </td>
 			        		<td> {{ book_detail.field }}</td>
 			        	</tr>
-			        	<tr class="book-code">
+			        	<tr>
 			        		<td>ISBN: </td>
 			        		<td>{{ book_detail.code }}</td>
 			        	</tr>
-								<tr class="book-author">
+								<tr>
 									<td>Author: </td>
 									<td>{{ book_detail.author }}</td>
 								</tr>
-								<tr class="book-publisher">
+								<tr>
 									<td>Publisher: </td>
 									<td>{{ book_detail.publisher }}</td>
 								</tr>
-								<tr class="book-year">
+								<tr>
 									<td>Year: </td>
 									<td>{{ book_detail.publish_year }}</td>
 								</tr>
-								<tr class="book-pages">
+								<tr>
 									<td>Pages: </td>
 									<td>{{ book_detail.pages }}</td>
 								</tr>
